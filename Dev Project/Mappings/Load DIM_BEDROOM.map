@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map:map xmlns:map="http://www.indy.com/v2/map" id="_Suv5sPQ-EeqVyNW5qtGq5A" internalVersion="7" tech="platform:/plugin/com.indy.environment/technology/map/map.tech#_waYSMH8VEd2__Mzb_dB76A?fileId=_waYSMH8VEd2__Mzb_dB76A$type=tech$name=flow?">
+  <datastore id="_UX_IYPQ-EeqVyNW5qtGq5A" alias="T_BEDROOM" dataset="_UYb0UPQ-EeqVyNW5qtGq5A" ref="../Metadata/Hotel.md#_Au6vYfMzEeqLKIaZDIIWGw?fileId=_68QNMPMyEeqLKIaZDIIWGw$type=md$name=T_BEDROOM?">
+    <field id="_UYLVoPQ-EeqVyNW5qtGq5A" fullAlias="BDR_ID" name="BDR_ID" ref="../Metadata/Hotel.md#_Au_n4PMzEeqLKIaZDIIWGw?fileId=_68QNMPMyEeqLKIaZDIIWGw$type=md$name=BDR_ID?" updateKey="true"/>
+    <field id="_UYSqYPQ-EeqVyNW5qtGq5A" fullAlias="BDR_SHOWER" name="BDR_SHOWER" ref="../Metadata/Hotel.md#_AvBdEPMzEeqLKIaZDIIWGw?fileId=_68QNMPMyEeqLKIaZDIIWGw$type=md$name=BDR_SHOWER?"/>
+    <field id="_UYVGoPQ-EeqVyNW5qtGq5A" fullAlias="BDR_TYPE" name="BDR_TYPE" ref="../Metadata/Hotel.md#_AvCrN_MzEeqLKIaZDIIWGw?fileId=_68QNMPMyEeqLKIaZDIIWGw$type=md$name=BDR_TYPE?"/>
+    <field id="_UYQ1MPQ-EeqVyNW5qtGq5A" fullAlias="BDR_FLOOR" name="BDR_FLOOR" ref="../Metadata/Hotel.md#_AvA2APMzEeqLKIaZDIIWGw?fileId=_68QNMPMyEeqLKIaZDIIWGw$type=md$name=BDR_FLOOR?"/>
+    <field id="_UYT4gPQ-EeqVyNW5qtGq5A" fullAlias="BDR_BED_COUNT" name="BDR_BED_COUNT" ref="../Metadata/Hotel.md#_AvCEIPMzEeqLKIaZDIIWGw?fileId=_68QNMPMyEeqLKIaZDIIWGw$type=md$name=BDR_BED_COUNT?"/>
+    <field id="_UYSDUPQ-EeqVyNW5qtGq5A" fullAlias="BDR_BATH" name="BDR_BATH" ref="../Metadata/Hotel.md#_AvA2B_MzEeqLKIaZDIIWGw?fileId=_68QNMPMyEeqLKIaZDIIWGw$type=md$name=BDR_BATH?"/>
+    <field id="_UYQOIPQ-EeqVyNW5qtGq5A" fullAlias="BDR_NUMBER" name="BDR_NUMBER" ref="../Metadata/Hotel.md#_AvAO8PMzEeqLKIaZDIIWGw?fileId=_68QNMPMyEeqLKIaZDIIWGw$type=md$name=BDR_NUMBER?"/>
+    <field id="_UYTRcPQ-EeqVyNW5qtGq5A" fullAlias="BDR_BAR" name="BDR_BAR" ref="../Metadata/Hotel.md#_AvBdF_MzEeqLKIaZDIIWGw?fileId=_68QNMPMyEeqLKIaZDIIWGw$type=md$name=BDR_BAR?"/>
+    <field id="_UYUfkPQ-EeqVyNW5qtGq5A" fullAlias="BDR_PHONE_NUMBER" name="BDR_PHONE_NUMBER" ref="../Metadata/Hotel.md#_AvCrMPMzEeqLKIaZDIIWGw?fileId=_68QNMPMyEeqLKIaZDIIWGw$type=md$name=BDR_PHONE_NUMBER?"/>
+    <constraint id="_UYVtsPQ-EeqVyNW5qtGq5A" name="PK_T_BEDROOM" ref="../Metadata/Hotel.md#_AvHjsPMzEeqLKIaZDIIWGw?fileId=_68QNMPMyEeqLKIaZDIIWGw$type=md$name=PK_T_BEDROOM?" reject="true"/>
+  </datastore>
+  <datastore id="_VeePUPQ-EeqVyNW5qtGq5A" alias="DIM_BEDROOM" dataset="_VeonYPQ-EeqVyNW5qtGq5A" ref="../Metadata/Datamart.md#_H7j0EfNmEeqLKIaZDIIWGw?fileId=_EIDtQPNmEeqLKIaZDIIWGw$type=md$name=DIM_BEDROOM?" subExpression="[A]">
+    <field id="_Veju4PQ-EeqVyNW5qtGq5A" enable="true" insert="true" name="BDR_TYPE" ref="../Metadata/Datamart.md#_H8avsPNmEeqLKIaZDIIWGw?fileId=_EIDtQPNmEeqLKIaZDIIWGw$type=md$name=BDR_TYPE?" update="true">
+      <expression id="_WDqAAPQ-EeqVyNW5qtGq5A" setDescriptorRef="_WDgPAPQ-EeqVyNW5qtGq5A">
+        <expression>T_BEDROOM.BDR_TYPE</expression>
+      </expression>
+    </field>
+    <field id="_VekV8PQ-EeqVyNW5qtGq5A" enable="true" insert="true" name="UPDATE_DATE" ref="../Metadata/Datamart.md#_H8avt_NmEeqLKIaZDIIWGw?fileId=_EIDtQPNmEeqLKIaZDIIWGw$type=md$name=UPDATE_DATE?" update="true">
+      <expression id="_WDrOIPQ-EeqVyNW5qtGq5A" setDescriptorRef="_WDgPAPQ-EeqVyNW5qtGq5A">
+        <expression>current_date</expression>
+      </expression>
+    </field>
+    <field id="_VehSofQ-EeqVyNW5qtGq5A" enable="true" insert="true" name="BDR_SHOWER" ref="../Metadata/Datamart.md#_H8Y6gPNmEeqLKIaZDIIWGw?fileId=_EIDtQPNmEeqLKIaZDIIWGw$type=md$name=BDR_SHOWER?" update="true">
+      <expression id="_WDscQPQ-EeqVyNW5qtGq5A" setDescriptorRef="_WDgPAPQ-EeqVyNW5qtGq5A">
+        <expression>T_BEDROOM.BDR_SHOWER</expression>
+      </expression>
+    </field>
+    <field id="_VegEgPQ-EeqVyNW5qtGq5A" enable="true" insert="true" name="BDR_NUMBER" ref="../Metadata/Datamart.md#_H8XsYPNmEeqLKIaZDIIWGw?fileId=_EIDtQPNmEeqLKIaZDIIWGw$type=md$name=BDR_NUMBER?" update="true">
+      <expression id="_WDtDUPQ-EeqVyNW5qtGq5A" setDescriptorRef="_WDgPAPQ-EeqVyNW5qtGq5A">
+        <expression>T_BEDROOM.BDR_NUMBER</expression>
+      </expression>
+    </field>
+    <field id="_VegrkPQ-EeqVyNW5qtGq5A" enable="true" insert="true" name="BDR_FLOOR" ref="../Metadata/Datamart.md#_H8XsaPNmEeqLKIaZDIIWGw?fileId=_EIDtQPNmEeqLKIaZDIIWGw$type=md$name=BDR_FLOOR?" update="true">
+      <expression id="_WDtqYPQ-EeqVyNW5qtGq5A" setDescriptorRef="_WDgPAPQ-EeqVyNW5qtGq5A">
+        <expression>T_BEDROOM.BDR_FLOOR</expression>
+      </expression>
+    </field>
+    <field id="_VeigwPQ-EeqVyNW5qtGq5A" enable="true" insert="true" name="BDR_BED_COUNT" ref="../Metadata/Datamart.md#_H8aIoPNmEeqLKIaZDIIWGw?fileId=_EIDtQPNmEeqLKIaZDIIWGw$type=md$name=BDR_BED_COUNT?" update="true">
+      <expression id="_WDuRcPQ-EeqVyNW5qtGq5A" setDescriptorRef="_WDgPAPQ-EeqVyNW5qtGq5A">
+        <expression>T_BEDROOM.BDR_BED_COUNT</expression>
+      </expression>
+    </field>
+    <field id="_VefdcPQ-EeqVyNW5qtGq5A" enable="true" insert="true" name="BDR_ID" ref="../Metadata/Datamart.md#_H8XFUPNmEeqLKIaZDIIWGw?fileId=_EIDtQPNmEeqLKIaZDIIWGw$type=md$name=BDR_ID?" update="true" updateKey="true">
+      <expression id="_WDu4gPQ-EeqVyNW5qtGq5A" setDescriptorRef="_WDgPAPQ-EeqVyNW5qtGq5A">
+        <expression>T_BEDROOM.BDR_ID</expression>
+      </expression>
+    </field>
+    <field id="_VehSoPQ-EeqVyNW5qtGq5A" enable="true" insert="true" name="BDR_BATH" ref="../Metadata/Datamart.md#_H8YTcPNmEeqLKIaZDIIWGw?fileId=_EIDtQPNmEeqLKIaZDIIWGw$type=md$name=BDR_BATH?" update="true">
+      <expression id="_WDvfkPQ-EeqVyNW5qtGq5A" setDescriptorRef="_WDgPAPQ-EeqVyNW5qtGq5A">
+        <expression>T_BEDROOM.BDR_BATH</expression>
+      </expression>
+    </field>
+    <field id="_VejH0PQ-EeqVyNW5qtGq5A" enable="true" insert="true" name="BDR_PHONE_NUMBER" ref="../Metadata/Datamart.md#_H8aIqPNmEeqLKIaZDIIWGw?fileId=_EIDtQPNmEeqLKIaZDIIWGw$type=md$name=BDR_PHONE_NUMBER?" update="true">
+      <expression id="_WDwGoPQ-EeqVyNW5qtGq5A" setDescriptorRef="_WDgPAPQ-EeqVyNW5qtGq5A">
+        <expression>T_BEDROOM.BDR_PHONE_NUMBER</expression>
+      </expression>
+    </field>
+    <field id="_Veh5sPQ-EeqVyNW5qtGq5A" enable="true" insert="true" name="BDR_BAR" ref="../Metadata/Datamart.md#_H8ZhkPNmEeqLKIaZDIIWGw?fileId=_EIDtQPNmEeqLKIaZDIIWGw$type=md$name=BDR_BAR?" update="true">
+      <expression id="_WDwGofQ-EeqVyNW5qtGq5A" setDescriptorRef="_WDgPAPQ-EeqVyNW5qtGq5A">
+        <expression>T_BEDROOM.BDR_BAR</expression>
+      </expression>
+    </field>
+    <constraint id="_Vek9APQ-EeqVyNW5qtGq5A" name="PK_DIM_BEDROOM" ref="../Metadata/Datamart.md#_H8dL8PNmEeqLKIaZDIIWGw?fileId=_EIDtQPNmEeqLKIaZDIIWGw$type=md$name=PK_DIM_BEDROOM?" reject="true"/>
+    <setDescriptor id="_WDgPAPQ-EeqVyNW5qtGq5A" label="A"/>
+  </datastore>
+  <template id="_WD3bYPQ-EeqVyNW5qtGq5A" name="I_DIM_BEDROOM" process="platform:/plugin/com.indy.environment/templates/templates.generic/Rdbms/Hsql/INTEGRATION%20Hsql.tp.proc#_HFOfdjEZEd-WZe6cNi2k2w?fileId=_HFOfdjEZEd-WZe6cNi2k2w$type=proc$name=INTEGRATION%20Hsql?" targetId="_VeePUPQ-EeqVyNW5qtGq5A"/>
+  <template id="_WFXQMPQ-EeqVyNW5qtGq5A" name="L1_DIM_BEDROOM" process="platform:/plugin/com.indy.environment/templates/templates.generic/Rdbms/LOAD%20Rdbms%20to%20Rdbms.tp.proc#_aafbe681-11ab-4ebc-ab56-de794128c580?fileId=_aafbe681-11ab-4ebc-ab56-de794128c580$type=proc$name=LOAD%20Rdbms%20to%20Rdbms?" sourceId="_UX_IYPQ-EeqVyNW5qtGq5A" targetId="_VeePUPQ-EeqVyNW5qtGq5A"/>
+  <dataSet id="_UYb0UPQ-EeqVyNW5qtGq5A">
+    <container>_UX_IYPQ-EeqVyNW5qtGq5A</container>
+  </dataSet>
+  <dataSet id="_VeonYPQ-EeqVyNW5qtGq5A">
+    <container>_VeePUPQ-EeqVyNW5qtGq5A</container>
+  </dataSet>
+  <hint>
+    <usedField>#_UYLVoPQ-EeqVyNW5qtGq5A</usedField>
+    <usedField>#_UYSqYPQ-EeqVyNW5qtGq5A</usedField>
+    <usedField>#_UYVGoPQ-EeqVyNW5qtGq5A</usedField>
+    <usedField>#_UYQ1MPQ-EeqVyNW5qtGq5A</usedField>
+    <usedField>#_UYT4gPQ-EeqVyNW5qtGq5A</usedField>
+    <usedField>#_UYSDUPQ-EeqVyNW5qtGq5A</usedField>
+    <usedField>#_UYQOIPQ-EeqVyNW5qtGq5A</usedField>
+    <usedField>#_UYTRcPQ-EeqVyNW5qtGq5A</usedField>
+    <usedField>#_UYUfkPQ-EeqVyNW5qtGq5A</usedField>
+  </hint>
+  <diagram><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<notation:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:map="http://www.indy.com/v2/map" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.1/notation" xsi:schemaLocation="http://www.eclipse.org/gmf/runtime/1.0.1/notation http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmi:id="_S0NBcPQ-EeqVyNW5qtGq5A" type="Map" measurementUnit="Pixel">
+  <children xmi:type="notation:Shape" xmi:id="_UYp2wPQ-EeqVyNW5qtGq5A" type="2004" fontName="Segoe UI">
+    <children xmi:type="notation:DecorationNode" xmi:id="_UYsTAPQ-EeqVyNW5qtGq5A" type="5005"/>
+    <children xmi:type="notation:DecorationNode" xmi:id="_UYsTAfQ-EeqVyNW5qtGq5A" type="5007"/>
+    <children xmi:type="notation:DecorationNode" xmi:id="_UYs6EPQ-EeqVyNW5qtGq5A" type="7003"/>
+    <children xmi:type="notation:DecorationNode" xmi:id="_UYs6EfQ-EeqVyNW5qtGq5A" type="7009"/>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_UYuvQPQ-EeqVyNW5qtGq5A" type="7004">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_UYuvQfQ-EeqVyNW5qtGq5A"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_UYuvQvQ-EeqVyNW5qtGq5A"/>
+    </children>
+    <children xmi:type="notation:DecorationNode" xmi:id="_UYuvQ_Q-EeqVyNW5qtGq5A" type="5009">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_UYvWUPQ-EeqVyNW5qtGq5A"/>
+    </children>
+    <children xmi:type="notation:DecorationNode" xmi:id="_UYvWUfQ-EeqVyNW5qtGq5A" type="7005">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_UYvWUvQ-EeqVyNW5qtGq5A"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_UYvWU_Q-EeqVyNW5qtGq5A"/>
+    </children>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_UZztUPQ-EeqVyNW5qtGq5A" type="7007"/>
+    <children xmi:type="notation:DecorationNode" xmi:id="_UZztUfQ-EeqVyNW5qtGq5A" type="5009">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_UZztUvQ-EeqVyNW5qtGq5A"/>
+    </children>
+    <element xmi:type="map:Datastore" href="../../Load%20DIM_BEDROOM.map#_UX_IYPQ-EeqVyNW5qtGq5A?fileId=_Suv5sPQ-EeqVyNW5qtGq5A$type=map?"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_UYp2wfQ-EeqVyNW5qtGq5A" x="277" y="183"/>
+  </children>
+  <children xmi:type="notation:Shape" xmi:id="_VeuG8PQ-EeqVyNW5qtGq5A" type="2004" fontName="Segoe UI">
+    <children xmi:type="notation:DecorationNode" xmi:id="_VeuuAPQ-EeqVyNW5qtGq5A" type="5005"/>
+    <children xmi:type="notation:DecorationNode" xmi:id="_VeuuAfQ-EeqVyNW5qtGq5A" type="5007"/>
+    <children xmi:type="notation:DecorationNode" xmi:id="_VeuuAvQ-EeqVyNW5qtGq5A" type="7003"/>
+    <children xmi:type="notation:DecorationNode" xmi:id="_VeuuA_Q-EeqVyNW5qtGq5A" type="7009"/>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_VeuuBPQ-EeqVyNW5qtGq5A" type="7004">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_VeuuBfQ-EeqVyNW5qtGq5A"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_VeuuBvQ-EeqVyNW5qtGq5A"/>
+    </children>
+    <children xmi:type="notation:DecorationNode" xmi:id="_VeuuB_Q-EeqVyNW5qtGq5A" type="5009">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_VeuuCPQ-EeqVyNW5qtGq5A"/>
+    </children>
+    <children xmi:type="notation:DecorationNode" xmi:id="_VeuuCfQ-EeqVyNW5qtGq5A" type="7005">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_VeuuCvQ-EeqVyNW5qtGq5A"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_VeuuC_Q-EeqVyNW5qtGq5A"/>
+    </children>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_VeuuDPQ-EeqVyNW5qtGq5A" type="7007"/>
+    <element xmi:type="map:Datastore" href="../../Load%20DIM_BEDROOM.map#_VeePUPQ-EeqVyNW5qtGq5A?fileId=_Suv5sPQ-EeqVyNW5qtGq5A$type=map?"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_VeuG8fQ-EeqVyNW5qtGq5A" x="617" y="188"/>
+  </children>
+  <styles xmi:type="notation:DiagramStyle" xmi:id="_S0NBcfQ-EeqVyNW5qtGq5A"/>
+  <element xmi:type="map:Map" href="../../Load%20DIM_BEDROOM.map#_Suv5sPQ-EeqVyNW5qtGq5A?fileId=_Suv5sPQ-EeqVyNW5qtGq5A$type=map$name=Load%20DIM_BEDROOM?"/>
+  <edges xmi:type="notation:Edge" xmi:id="_WE7yYPQ-EeqVyNW5qtGq5A" type="targetLink" source="_VeuG8PQ-EeqVyNW5qtGq5A" target="_UYp2wPQ-EeqVyNW5qtGq5A">
+    <element xsi:nil="true"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_WE7yYfQ-EeqVyNW5qtGq5A" points="[-105, -4, 235, 9]$[-235, -9, 105, 4]"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_WFEVQPQ-EeqVyNW5qtGq5A" type="targetDataSetLink" source="_VeuG8PQ-EeqVyNW5qtGq5A" target="_VeuG8PQ-EeqVyNW5qtGq5A">
+    <element xmi:type="map:DataSet" href="../../Load%20DIM_BEDROOM.map#_UYb0UPQ-EeqVyNW5qtGq5A?fileId=_Suv5sPQ-EeqVyNW5qtGq5A$type=map?"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_WFEVQfQ-EeqVyNW5qtGq5A" points="[0, 0, 0, 0]$[0, 0, 0, 0]"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_WFE8UPQ-EeqVyNW5qtGq5A" type="targetSetLink" source="_VeuG8PQ-EeqVyNW5qtGq5A" target="_VeuG8PQ-EeqVyNW5qtGq5A">
+    <element xmi:type="map:SetDescriptor" href="../../Load%20DIM_BEDROOM.map#_WDgPAPQ-EeqVyNW5qtGq5A?fileId=_Suv5sPQ-EeqVyNW5qtGq5A$type=map?"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_WFE8UfQ-EeqVyNW5qtGq5A" points="[0, 0, 0, 0]$[0, 0, 0, 0]"/>
+  </edges>
+</notation:Diagram>
+]]></diagram>
+</map:map>
