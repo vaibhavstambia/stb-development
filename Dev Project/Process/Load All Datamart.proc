@@ -3,7 +3,9 @@
   <actionProcessRef id="64f44b52-74e6-4044-94f0-430dc3170da1" isBeginAction="false" name="Load DIM_CUSTOMER" nbCycles="-1" toleratedError="false" processMap="true" targetName="../Mappings/Load%20DIM_CUSTOMER.map#_EQuroPNnEeqLKIaZDIIWGw?fileId=_EQuroPNnEeqLKIaZDIIWGw$name=Load%20DIM_CUSTOMER$type=map?"/>
   <actionProcessRef id="7a257527-fa17-4bff-a4b0-6ef6ea36d71a" isBeginAction="false" name="Load PAYMENT TYPE" nbCycles="-1" toleratedError="false" processMap="true" targetName="../Mappings/Load%20PAYMENT%20TYPE.map#_POsDcPNmEeqLKIaZDIIWGw?fileId=_POsDcPNmEeqLKIaZDIIWGw$name=Load%20PAYMENT%20TYPE$type=map?">
     <link id="51b976f0-a72c-4b6e-b4a3-df55d9e1ae9f" executionType="OK" generationType="OK_KO" mandatory="1" targetId="64f44b52-74e6-4044-94f0-430dc3170da1"/>
+    <link id="c6cc6318-8b92-481b-b474-1524a01103d3" executionType="OK" generationType="OK_KO" mandatory="1" targetId="c0e4ed2b-c7b6-40fa-9be9-1725c4f7de68"/>
   </actionProcessRef>
+  <actionProcessRef id="c0e4ed2b-c7b6-40fa-9be9-1725c4f7de68" isBeginAction="false" name="Load DIM_BEDROOM" nbCycles="-1" toleratedError="false" processMap="true" targetName="../Mappings/Load%20DIM_BEDROOM.map#_Suv5sPQ-EeqVyNW5qtGq5A?fileId=_Suv5sPQ-EeqVyNW5qtGq5A$name=Load%20DIM_BEDROOM$type=map?"/>
   <diagram><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
 <notation:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.1/notation" xmlns:proc="http://www.example.org/proc" xsi:schemaLocation="http://www.eclipse.org/gmf/runtime/1.0.1/notation http://www.eclipse.org/gmf/runtime/1.0.2/notation#/?fileId=d8a3107d-9614-41c4-bf79-f685f9d68dea?" xmi:id="_n3UEQAOnEeu8yeYpnounLQ" type="Proc" measurementUnit="Pixel">
   <children xmi:type="notation:Node" xmi:id="_sHNzMAOnEeu8yeYpnounLQ" type="2003">
@@ -38,6 +40,22 @@
     <element xmi:type="proc:ActionProcessRef" href="../../Load%20All%20Datamart.proc#7a257527-fa17-4bff-a4b0-6ef6ea36d71a?fileId=d8a3107d-9614-41c4-bf79-f685f9d68dea$type=proc$name=Load%20PAYMENT%20TYPE?"/>
     <layoutConstraint xmi:type="notation:Bounds" xmi:id="_suaWEQOnEeu8yeYpnounLQ" x="370" y="60"/>
   </children>
+  <children xmi:type="notation:Node" xmi:id="_cyf5sAOsEeu3GsCj9F155w" type="2003">
+    <children xmi:type="notation:Node" xmi:id="_cykLIAOsEeu3GsCj9F155w" type="5003"/>
+    <children xmi:type="notation:Node" xmi:id="_cykyMAOsEeu3GsCj9F155w" type="7003">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_cykyMQOsEeu3GsCj9F155w" collapsed="true"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_cykyMgOsEeu3GsCj9F155w"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_cykyMwOsEeu3GsCj9F155w"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_cylZQAOsEeu3GsCj9F155w" type="7004">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_cylZQQOsEeu3GsCj9F155w"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_cylZQgOsEeu3GsCj9F155w"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_cylZQwOsEeu3GsCj9F155w"/>
+    </children>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_cyf5sQOsEeu3GsCj9F155w" fontName="Segoe UI"/>
+    <element xmi:type="proc:ActionProcessRef" href="../../Load%20All%20Datamart.proc#c0e4ed2b-c7b6-40fa-9be9-1725c4f7de68?fileId=d8a3107d-9614-41c4-bf79-f685f9d68dea$type=proc$name=Load%20DIM_BEDROOM?"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_cyf5sgOsEeu3GsCj9F155w" x="580" y="210"/>
+  </children>
   <styles xmi:type="notation:DiagramStyle" xmi:id="_n3UEQQOnEeu8yeYpnounLQ"/>
   <element xmi:type="proc:ActionProcess" href="../../Load%20All%20Datamart.proc#d8a3107d-9614-41c4-bf79-f685f9d68dea?fileId=d8a3107d-9614-41c4-bf79-f685f9d68dea$type=proc$name=Load%20All%20Datamart?"/>
   <edges xmi:type="notation:Edge" xmi:id="_tU_08AOnEeu8yeYpnounLQ" type="4001" source="_suZvAAOnEeu8yeYpnounLQ" target="_sHNzMAOnEeu8yeYpnounLQ">
@@ -47,6 +65,13 @@
     <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_tVAcAgOnEeu8yeYpnounLQ" points="[-1, 20, 0, -130]$[-4, 154, -3, 4]"/>
     <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_tVVzMAOnEeu8yeYpnounLQ" id="(0.4012345679012346,1.0)"/>
     <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_tVVzMQOnEeu8yeYpnounLQ" id="(0.43023255813953487,0.9024390243902439)"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_dad4oAOsEeu3GsCj9F155w" type="4001" source="_suZvAAOnEeu8yeYpnounLQ" target="_cyf5sAOsEeu3GsCj9F155w">
+    <styles xmi:type="notation:RoutingStyle" xmi:id="_dad4oQOsEeu3GsCj9F155w"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_dad4ogOsEeu3GsCj9F155w" fontName="Segoe UI"/>
+    <element xmi:type="proc:Link" href="../../Load%20All%20Datamart.proc#c6cc6318-8b92-481b-b474-1524a01103d3?fileId=d8a3107d-9614-41c4-bf79-f685f9d68dea$type=proc?"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_dad4owOsEeu3GsCj9F155w" points="[42, 20, -181, -109]$[326, 125, 103, -4]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_dajYMAOsEeu3GsCj9F155w" id="(0.4339622641509434,1.0)"/>
   </edges>
 </notation:Diagram>
 ]]></diagram>
