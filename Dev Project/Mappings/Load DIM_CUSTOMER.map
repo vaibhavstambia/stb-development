@@ -62,7 +62,7 @@
     <expression>T_CUSTOMER.CUS_ID = 1</expression>
   </filter>
   <template id="_ITpHcPNnEeqLKIaZDIIWGw" name="I_DIM_CUSTOMER" process="platform:/plugin/com.indy.environment/templates/templates.generic/Rdbms/Hsql/INTEGRATION%20Hsql.tp.proc#_HFOfdjEZEd-WZe6cNi2k2w?fileId=_HFOfdjEZEd-WZe6cNi2k2w$type=proc$name=INTEGRATION%20Hsql?" targetId="_Fpw7IPNnEeqLKIaZDIIWGw"/>
-  <template id="_IUUc4PNnEeqLKIaZDIIWGw" name="L1_DIM_CUSTOMER" process="platform:/plugin/com.indy.environment/templates/templates.generic/Rdbms/LOAD%20Rdbms%20to%20Rdbms.tp.proc#_aafbe681-11ab-4ebc-ab56-de794128c580?fileId=_aafbe681-11ab-4ebc-ab56-de794128c580$type=proc$name=LOAD%20Rdbms%20to%20Rdbms?" sourceId="_GyL7wPNnEeqLKIaZDIIWGw _HJK4YPNnEeqLKIaZDIIWGw" targetId="_Fpw7IPNnEeqLKIaZDIIWGw"/>
+  <template id="_IUUc4PNnEeqLKIaZDIIWGw" name="L1_DIM_CUSTOMER" process="platform:/plugin/com.indy.environment/templates/templates.generic/Rdbms/LOAD%20Rdbms%20to%20Rdbms.tp.proc#_aafbe681-11ab-4ebc-ab56-de794128c580?fileId=_aafbe681-11ab-4ebc-ab56-de794128c580$type=proc$name=LOAD%20Rdbms%20to%20Rdbms?" sourceId="_HJK4YPNnEeqLKIaZDIIWGw _GyL7wPNnEeqLKIaZDIIWGw" targetId="_Fpw7IPNnEeqLKIaZDIIWGw"/>
   <dataSet id="_FqALsPNnEeqLKIaZDIIWGw">
     <container>_Fpw7IPNnEeqLKIaZDIIWGw</container>
   </dataSet>
@@ -81,26 +81,6 @@
   </hint>
   <diagram><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
 <notation:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:map="http://www.indy.com/v2/map" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.1/notation" xsi:schemaLocation="http://www.eclipse.org/gmf/runtime/1.0.1/notation http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmi:id="_EUGIsPNnEeqLKIaZDIIWGw" type="Map" measurementUnit="Pixel">
-  <children xmi:type="notation:Shape" xmi:id="_FqFrQPNnEeqLKIaZDIIWGw" type="2004" fontName="Segoe UI">
-    <children xmi:type="notation:DecorationNode" xmi:id="_FqGSUPNnEeqLKIaZDIIWGw" type="5005"/>
-    <children xmi:type="notation:DecorationNode" xmi:id="_FqGSUfNnEeqLKIaZDIIWGw" type="5007"/>
-    <children xmi:type="notation:DecorationNode" xmi:id="_FqGSUvNnEeqLKIaZDIIWGw" type="7003"/>
-    <children xmi:type="notation:DecorationNode" xmi:id="_FqGSU_NnEeqLKIaZDIIWGw" type="7009"/>
-    <children xmi:type="notation:BasicCompartment" xmi:id="_FqGSVPNnEeqLKIaZDIIWGw" type="7004">
-      <styles xmi:type="notation:SortingStyle" xmi:id="_FqGSVfNnEeqLKIaZDIIWGw"/>
-      <styles xmi:type="notation:FilteringStyle" xmi:id="_FqGSVvNnEeqLKIaZDIIWGw"/>
-    </children>
-    <children xmi:type="notation:DecorationNode" xmi:id="_FqGSV_NnEeqLKIaZDIIWGw" type="5009">
-      <styles xmi:type="notation:DrawerStyle" xmi:id="_FqGSWPNnEeqLKIaZDIIWGw"/>
-    </children>
-    <children xmi:type="notation:DecorationNode" xmi:id="_FqGSWfNnEeqLKIaZDIIWGw" type="7005">
-      <styles xmi:type="notation:SortingStyle" xmi:id="_FqGSWvNnEeqLKIaZDIIWGw"/>
-      <styles xmi:type="notation:FilteringStyle" xmi:id="_FqGSW_NnEeqLKIaZDIIWGw"/>
-    </children>
-    <children xmi:type="notation:BasicCompartment" xmi:id="_FqGSXPNnEeqLKIaZDIIWGw" type="7007"/>
-    <element xmi:type="map:Datastore" href="../../Load%20DIM_CUSTOMER.map#_Fpw7IPNnEeqLKIaZDIIWGw?fileId=_EQuroPNnEeqLKIaZDIIWGw$type=map?"/>
-    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_FqFrQfNnEeqLKIaZDIIWGw" x="686" y="184"/>
-  </children>
   <children xmi:type="notation:Shape" xmi:id="_GyVswPNnEeqLKIaZDIIWGw" type="2004" fontName="Segoe UI">
     <children xmi:type="notation:DecorationNode" xmi:id="_GyVswvNnEeqLKIaZDIIWGw" type="5005"/>
     <children xmi:type="notation:DecorationNode" xmi:id="_GyVsw_NnEeqLKIaZDIIWGw" type="5007"/>
@@ -153,7 +133,27 @@
     <styles xmi:type="notation:FontStyle" xmi:id="_r863kvNoEeqLKIaZDIIWGw" fontName="Segoe UI"/>
     <styles xmi:type="notation:FillStyle" xmi:id="_r863k_NoEeqLKIaZDIIWGw"/>
     <element xmi:type="map:Filter" href="../../Load%20DIM_CUSTOMER.map#_r8WP0PNoEeqLKIaZDIIWGw?fileId=_EQuroPNnEeqLKIaZDIIWGw$type=map?"/>
-    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_r863lPNoEeqLKIaZDIIWGw" x="150" y="263"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_r863lPNoEeqLKIaZDIIWGw" x="230" y="222"/>
+  </children>
+  <children xmi:type="notation:Shape" xmi:id="_FqFrQPNnEeqLKIaZDIIWGw" type="2004" fontName="Segoe UI">
+    <children xmi:type="notation:DecorationNode" xmi:id="_FqGSUPNnEeqLKIaZDIIWGw" type="5005"/>
+    <children xmi:type="notation:DecorationNode" xmi:id="_FqGSUfNnEeqLKIaZDIIWGw" type="5007"/>
+    <children xmi:type="notation:DecorationNode" xmi:id="_FqGSUvNnEeqLKIaZDIIWGw" type="7003"/>
+    <children xmi:type="notation:DecorationNode" xmi:id="_FqGSU_NnEeqLKIaZDIIWGw" type="7009"/>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_FqGSVPNnEeqLKIaZDIIWGw" type="7004">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_FqGSVfNnEeqLKIaZDIIWGw"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_FqGSVvNnEeqLKIaZDIIWGw"/>
+    </children>
+    <children xmi:type="notation:DecorationNode" xmi:id="_FqGSV_NnEeqLKIaZDIIWGw" type="5009">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_FqGSWPNnEeqLKIaZDIIWGw"/>
+    </children>
+    <children xmi:type="notation:DecorationNode" xmi:id="_FqGSWfNnEeqLKIaZDIIWGw" type="7005">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_FqGSWvNnEeqLKIaZDIIWGw"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_FqGSW_NnEeqLKIaZDIIWGw"/>
+    </children>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_FqGSXPNnEeqLKIaZDIIWGw" type="7007"/>
+    <element xmi:type="map:Datastore" href="../../Load%20DIM_CUSTOMER.map#_Fpw7IPNnEeqLKIaZDIIWGw?fileId=_EQuroPNnEeqLKIaZDIIWGw$type=map?"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_FqFrQfNnEeqLKIaZDIIWGw" x="585" y="255"/>
   </children>
   <styles xmi:type="notation:DiagramStyle" xmi:id="_EUGIsfNnEeqLKIaZDIIWGw"/>
   <element xmi:type="map:Map" href="../../Load%20DIM_CUSTOMER.map#_EQuroPNnEeqLKIaZDIIWGw?fileId=_EQuroPNnEeqLKIaZDIIWGw$type=map$name=Load%20DIM_CUSTOMER?"/>
