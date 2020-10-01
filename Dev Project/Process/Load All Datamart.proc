@@ -56,6 +56,18 @@
     <element xmi:type="proc:ActionProcessRef" href="../../Load%20All%20Datamart.proc#c0e4ed2b-c7b6-40fa-9be9-1725c4f7de68?fileId=d8a3107d-9614-41c4-bf79-f685f9d68dea$type=proc$name=Load%20DIM_BEDROOM?"/>
     <layoutConstraint xmi:type="notation:Bounds" xmi:id="_cyf5sgOsEeu3GsCj9F155w" x="580" y="210"/>
   </children>
+  <children xmi:type="notation:Shape" xmi:id="_dVIrsAO3Eeu05vw9WGG2UQ" type="Note" fontName="Segoe UI" description="Test" fillColor="13369343" transparency="0" lineColor="6737151" lineWidth="1">
+    <children xmi:type="notation:BasicDecorationNode" xmi:id="_dViUUAO3Eeu05vw9WGG2UQ" type="DiagramName">
+      <element xsi:nil="true"/>
+    </children>
+    <children xmi:type="notation:BasicDecorationNode" xmi:id="_dVi7YAO3Eeu05vw9WGG2UQ" type="Description">
+      <element xsi:nil="true"/>
+    </children>
+    <styles xmi:type="notation:TextStyle" xmi:id="_dVJSwAO3Eeu05vw9WGG2UQ"/>
+    <styles xmi:type="notation:LineTypeStyle" xmi:id="_dVJSwQO3Eeu05vw9WGG2UQ"/>
+    <element xsi:nil="true"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_dVJSwgO3Eeu05vw9WGG2UQ" x="936" y="97"/>
+  </children>
   <styles xmi:type="notation:DiagramStyle" xmi:id="_n3UEQQOnEeu8yeYpnounLQ"/>
   <element xmi:type="proc:ActionProcess" href="../../Load%20All%20Datamart.proc#d8a3107d-9614-41c4-bf79-f685f9d68dea?fileId=d8a3107d-9614-41c4-bf79-f685f9d68dea$type=proc$name=Load%20All%20Datamart?"/>
   <edges xmi:type="notation:Edge" xmi:id="_tU_08AOnEeu8yeYpnounLQ" type="4001" source="_suZvAAOnEeu8yeYpnounLQ" target="_sHNzMAOnEeu8yeYpnounLQ">
