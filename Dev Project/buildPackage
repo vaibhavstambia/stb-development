@@ -1,0 +1,1 @@
+build package "Dev Project/Process/Load All Datamart.proc" -target "/var/jenkins_home/workspace/Job1/output.pck"
