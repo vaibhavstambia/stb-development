@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<proc:process xmlns:proc="http://www.example.org/proc" id="dc43db32-54f5-4642-9d78-fd0ced406711">
+  <metaDataLink id="f98e57cb-b23e-4a4f-9878-0d8e263ac71b" output="true" name="ws_output" target="../Metadata/WSOutputFile.md#_BgJC0QxfEeu8CJE7Ik3tcg?fileId=_1W9DcAxeEeu8CJE7Ik3tcg$type=md$name=ws_output?"/>
+  <subProcess id="3e99174a-eea7-4cd8-870f-f4b676c19734" isBeginAction="false" name="Load Datamart" nbCycles="-1" toleratedError="false">
+    <actionCode id="5c2fb0a5-8fe6-4715-8622-7e1766349a87" isBeginAction="false" name="Write Errors" nbCycles="-1" toleratedError="false" technology="com.indy.engine.actionCodes.WriteTxtFileActionCodeI">
+      <parameter id="a50b79ce-3e50-4455-80b3-c0b5d57c1e60" name="TXT_WRITE_FILENAME" type="String" value="${/CORE_TEMPORARY_FOLDER}$/ws_output.csv"/>
+      <code>%e(groovy){&#xD;
+def a = &quot;&quot;&#xD;
+def tree = __ctx__.getVariableTreeByName(&quot;CORE_RET_MESS&quot;,&quot;~/&quot;,true)&#xD;
+if (tree.size() != 0) {&#xD;
+	def es=tree.entrySet()&#xD;
+	es.each{&#xD;
+	  	a = a+ &quot;-- ACTION --> &quot; + it.key + &quot;\n&quot;&#xD;
+	  	a = a+ it.value.getValue() +&quot;\n\n&quot;&#xD;
+	}&#xD;
+	__ctx__.retValue = a&#xD;
+}&#xD;
+}e(groovy)%&#xD;
+</code>
+    </actionCode>
+    <actionCode id="a60e4a0c-3c6a-4e24-8aff-73debe28b4f7" isBeginAction="false" name="Write Success" nbCycles="-1" toleratedError="false" technology="com.indy.engine.actionCodes.WriteTxtFileActionCodeI">
+      <parameter id="50743d42-3ced-46bb-941a-32743c1ff9e5" name="TXT_WRITE_FILENAME" type="String" value="${/CORE_TEMPORARY_FOLDER}$/ws_output.csv"/>
+      <code>Data Mart Loaded Successfully&#xD;
+&#xD;
+RECORDS LOADED&#xD;
+==================&#xD;
+&#xD;
+DIM_PAYMENT_TYPE - %e(rhino){__ctx__.sumVariable(&quot;SQL_STAT_INSERT&quot;, &quot;../Load All Datamart/Load PAYMENT TYPE&quot;)}e(rhino)%&#xD;
+&#xD;
+DIM_CUSTOMER - %e(rhino){__ctx__.sumVariable(&quot;SQL_STAT_INSERT&quot;, &quot;../Load All Datamart/Load DIM_CUSTOMER&quot;)}e(rhino)%&#xD;
+&#xD;
+DIM_DIM_BEDROOM - %e(rhino){__ctx__.sumVariable(&quot;SQL_STAT_INSERT&quot;, &quot;../Load All Datamart/Load DIM_BEDROOM&quot;)}e(rhino)%&#xD;
+</code>
+    </actionCode>
+    <actionProcessRef id="8902b891-aa07-44aa-a6f8-26c783148887" isBeginAction="false" name="Load All Datamart" nbCycles="-1" toleratedError="false" targetName="Load%20All%20Datamart.proc#d8a3107d-9614-41c4-bf79-f685f9d68dea?fileId=d8a3107d-9614-41c4-bf79-f685f9d68dea$type=proc$name=Load%20All%20Datamart?">
+      <link id="50c3637b-5965-4f6e-8609-3721ad618f48" executionType="OK" generationType="OK_KO" mandatory="1" targetId="a60e4a0c-3c6a-4e24-8aff-73debe28b4f7"/>
+      <link id="381ead02-ba9d-470a-b5a5-47494622ecbf" executionType="KO" generationType="OK_KO" mandatory="1" targetId="5c2fb0a5-8fe6-4715-8622-7e1766349a87"/>
+    </actionProcessRef>
+  </subProcess>
+  <diagram><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.1/notation" xmlns:proc="http://www.example.org/proc" xsi:schemaLocation="http://www.eclipse.org/gmf/runtime/1.0.1/notation http://www.eclipse.org/gmf/runtime/1.0.2/notation#/?fileId=dc43db32-54f5-4642-9d78-fd0ced406711?">
+  <notation:Diagram xmi:id="_SE314AxeEeu8CJE7Ik3tcg" type="Proc" measurementUnit="Pixel">
+    <children xmi:type="notation:Node" xmi:id="_WPSA0AxeEeu8CJE7Ik3tcg" type="2004">
+      <children xmi:type="notation:Node" xmi:id="_WPbKwAxeEeu8CJE7Ik3tcg" type="5004"/>
+      <children xmi:type="notation:Node" xmi:id="_WPjtoAxeEeu8CJE7Ik3tcg" type="7005">
+        <styles xmi:type="notation:DrawerStyle" xmi:id="_WPjtoQxeEeu8CJE7Ik3tcg"/>
+        <styles xmi:type="notation:SortingStyle" xmi:id="_WPjtogxeEeu8CJE7Ik3tcg"/>
+        <styles xmi:type="notation:FilteringStyle" xmi:id="_WPjtowxeEeu8CJE7Ik3tcg"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_WPkUsAxeEeu8CJE7Ik3tcg" type="7006">
+        <styles xmi:type="notation:DrawerStyle" xmi:id="_WPkUsQxeEeu8CJE7Ik3tcg"/>
+        <styles xmi:type="notation:SortingStyle" xmi:id="_WPkUsgxeEeu8CJE7Ik3tcg"/>
+        <styles xmi:type="notation:FilteringStyle" xmi:id="_WPkUswxeEeu8CJE7Ik3tcg"/>
+      </children>
+      <styles xmi:type="notation:ShapeStyle" xmi:id="_WPSn4AxeEeu8CJE7Ik3tcg" fontName="Segoe UI"/>
+      <styles xmi:type="notation:HintedDiagramLinkStyle" xmi:id="_WPSn4QxeEeu8CJE7Ik3tcg"/>
+      <element xmi:type="proc:SubActionProcess" href="../../wsLoadAllDatamart.proc#3e99174a-eea7-4cd8-870f-f4b676c19734?fileId=dc43db32-54f5-4642-9d78-fd0ced406711$type=proc$name=Load%20Datamart?"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_WPSn4gxeEeu8CJE7Ik3tcg" x="513" y="163"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_LY0YIAxfEeu8CJE7Ik3tcg" type="2006">
+      <children xmi:type="notation:Node" xmi:id="_LY4CgAxfEeu8CJE7Ik3tcg" type="5006"/>
+      <styles xmi:type="notation:ShapeStyle" xmi:id="_LY0YIQxfEeu8CJE7Ik3tcg" fontName="Segoe UI"/>
+      <element xmi:type="proc:MetaDataLink" href="../../wsLoadAllDatamart.proc#f98e57cb-b23e-4a4f-9878-0d8e263ac71b?fileId=dc43db32-54f5-4642-9d78-fd0ced406711$type=proc?"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_LY0YIgxfEeu8CJE7Ik3tcg" x="860" y="193"/>
+    </children>
+    <styles xmi:type="notation:DiagramStyle" xmi:id="_SE314QxeEeu8CJE7Ik3tcg"/>
+    <element xmi:type="proc:ActionProcess" href="../../wsLoadAllDatamart.proc#dc43db32-54f5-4642-9d78-fd0ced406711?fileId=dc43db32-54f5-4642-9d78-fd0ced406711$type=proc$name=wsLoadAllDatamart?"/>
+  </notation:Diagram>
+  <notation:Diagram xmi:id="_X6_7wAxeEeu8CJE7Ik3tcg" type="Proc" measurementUnit="Pixel">
+    <children xmi:type="notation:Node" xmi:id="_YcVHMAxeEeu8CJE7Ik3tcg" type="2003">
+      <children xmi:type="notation:Node" xmi:id="_YcdDAAxeEeu8CJE7Ik3tcg" type="5003"/>
+      <children xmi:type="notation:Node" xmi:id="_YceRIAxeEeu8CJE7Ik3tcg" type="7003">
+        <styles xmi:type="notation:DrawerStyle" xmi:id="_YceRIQxeEeu8CJE7Ik3tcg" collapsed="true"/>
+        <styles xmi:type="notation:SortingStyle" xmi:id="_YceRIgxeEeu8CJE7Ik3tcg"/>
+        <styles xmi:type="notation:FilteringStyle" xmi:id="_YceRIwxeEeu8CJE7Ik3tcg"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_Yce4MAxeEeu8CJE7Ik3tcg" type="7004">
+        <styles xmi:type="notation:DrawerStyle" xmi:id="_Yce4MQxeEeu8CJE7Ik3tcg"/>
+        <styles xmi:type="notation:SortingStyle" xmi:id="_Yce4MgxeEeu8CJE7Ik3tcg"/>
+        <styles xmi:type="notation:FilteringStyle" xmi:id="_Yce4MwxeEeu8CJE7Ik3tcg"/>
+      </children>
+      <styles xmi:type="notation:ShapeStyle" xmi:id="_YcVHMQxeEeu8CJE7Ik3tcg" fontName="Segoe UI"/>
+      <element xmi:type="proc:ActionProcessRef" href="../../wsLoadAllDatamart.proc#8902b891-aa07-44aa-a6f8-26c783148887?fileId=dc43db32-54f5-4642-9d78-fd0ced406711$type=proc$name=Load%20All%20Datamart?"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_YcVHMgxeEeu8CJE7Ik3tcg" x="295" y="120"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_emY1sAxeEeu8CJE7Ik3tcg" type="2001">
+      <children xmi:type="notation:Node" xmi:id="_emlC8AxeEeu8CJE7Ik3tcg" type="5001"/>
+      <children xmi:type="notation:Node" xmi:id="_emmREAxeEeu8CJE7Ik3tcg" type="7001">
+        <styles xmi:type="notation:DrawerStyle" xmi:id="_emmREQxeEeu8CJE7Ik3tcg" collapsed="true"/>
+        <styles xmi:type="notation:SortingStyle" xmi:id="_emmREgxeEeu8CJE7Ik3tcg"/>
+        <styles xmi:type="notation:FilteringStyle" xmi:id="_emmREwxeEeu8CJE7Ik3tcg"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_emm4IAxeEeu8CJE7Ik3tcg" type="7002">
+        <styles xmi:type="notation:DrawerStyle" xmi:id="_emm4IQxeEeu8CJE7Ik3tcg"/>
+        <styles xmi:type="notation:SortingStyle" xmi:id="_emm4IgxeEeu8CJE7Ik3tcg"/>
+        <styles xmi:type="notation:FilteringStyle" xmi:id="_emm4IwxeEeu8CJE7Ik3tcg"/>
+      </children>
+      <styles xmi:type="notation:ShapeStyle" xmi:id="_emZcwAxeEeu8CJE7Ik3tcg" fontName="Segoe UI"/>
+      <element xmi:type="proc:ActionCode" href="../../wsLoadAllDatamart.proc#5c2fb0a5-8fe6-4715-8622-7e1766349a87?fileId=dc43db32-54f5-4642-9d78-fd0ced406711$type=proc$name=Write%20Errors?"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_emZcwQxeEeu8CJE7Ik3tcg" x="225" y="220"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_gXCT8AxeEeu8CJE7Ik3tcg" type="2001">
+      <children xmi:type="notation:Node" xmi:id="_gXEwMAxeEeu8CJE7Ik3tcg" type="5001"/>
+      <children xmi:type="notation:Node" xmi:id="_gXFXQAxeEeu8CJE7Ik3tcg" type="7001">
+        <styles xmi:type="notation:DrawerStyle" xmi:id="_gXFXQQxeEeu8CJE7Ik3tcg" collapsed="true"/>
+        <styles xmi:type="notation:SortingStyle" xmi:id="_gXFXQgxeEeu8CJE7Ik3tcg"/>
+        <styles xmi:type="notation:FilteringStyle" xmi:id="_gXFXQwxeEeu8CJE7Ik3tcg"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_gXFXRAxeEeu8CJE7Ik3tcg" type="7002">
+        <styles xmi:type="notation:DrawerStyle" xmi:id="_gXFXRQxeEeu8CJE7Ik3tcg"/>
+        <styles xmi:type="notation:SortingStyle" xmi:id="_gXFXRgxeEeu8CJE7Ik3tcg"/>
+        <styles xmi:type="notation:FilteringStyle" xmi:id="_gXFXRwxeEeu8CJE7Ik3tcg"/>
+      </children>
+      <styles xmi:type="notation:ShapeStyle" xmi:id="_gXCT8QxeEeu8CJE7Ik3tcg" fontName="Segoe UI"/>
+      <element xmi:type="proc:ActionCode" href="../../wsLoadAllDatamart.proc#a60e4a0c-3c6a-4e24-8aff-73debe28b4f7?fileId=dc43db32-54f5-4642-9d78-fd0ced406711$type=proc$name=Write%20Success?"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_gXCT8gxeEeu8CJE7Ik3tcg" x="390" y="220"/>
+    </children>
+    <styles xmi:type="notation:DiagramStyle" xmi:id="_X6_7wQxeEeu8CJE7Ik3tcg"/>
+    <element xmi:type="proc:SubActionProcess" href="../../wsLoadAllDatamart.proc#3e99174a-eea7-4cd8-870f-f4b676c19734?fileId=dc43db32-54f5-4642-9d78-fd0ced406711$type=proc$name=Load%20Datamart?"/>
+    <edges xmi:type="notation:Edge" xmi:id="_luVIwAxeEeu8CJE7Ik3tcg" type="4001" source="_YcVHMAxeEeu8CJE7Ik3tcg" target="_gXCT8AxeEeu8CJE7Ik3tcg">
+      <styles xmi:type="notation:RoutingStyle" xmi:id="_luVIwQxeEeu8CJE7Ik3tcg"/>
+      <styles xmi:type="notation:FontStyle" xmi:id="_luVIwgxeEeu8CJE7Ik3tcg" fontName="Segoe UI"/>
+      <element xmi:type="proc:Link" href="../../wsLoadAllDatamart.proc#50c3637b-5965-4f6e-8609-3721ad618f48?fileId=dc43db32-54f5-4642-9d78-fd0ced406711$type=proc?"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_luVIwwxeEeu8CJE7Ik3tcg" points="[0, 0, -63, -60]$[63, 60, 0, 0]"/>
+      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_lub2cAxeEeu8CJE7Ik3tcg" id="(0.6618705035971223,1.0)"/>
+      <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_nH1ncAxgEeu8CJE7Ik3tcg" id="(0.4957983193277311,0.0)"/>
+    </edges>
+    <edges xmi:type="notation:Edge" xmi:id="_0Kez0AxfEeu8CJE7Ik3tcg" type="4001" source="_YcVHMAxeEeu8CJE7Ik3tcg" target="_emY1sAxeEeu8CJE7Ik3tcg">
+      <styles xmi:type="notation:RoutingStyle" xmi:id="_0Kez0QxfEeu8CJE7Ik3tcg"/>
+      <styles xmi:type="notation:FontStyle" xmi:id="_0Kez0gxfEeu8CJE7Ik3tcg" fontName="Segoe UI"/>
+      <element xmi:type="proc:Link" href="../../wsLoadAllDatamart.proc#381ead02-ba9d-470a-b5a5-47494622ecbf?fileId=dc43db32-54f5-4642-9d78-fd0ced406711$type=proc?"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_0Kez0wxfEeu8CJE7Ik3tcg" points="[0, 0, 63, -60]$[-63, 60, 0, 0]"/>
+      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_0Kh3IAxfEeu8CJE7Ik3tcg" id="(0.33093525179856115,1.0)"/>
+      <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_liuDwAxgEeu8CJE7Ik3tcg" id="(0.49523809523809526,0.0)"/>
+    </edges>
+  </notation:Diagram>
+</xmi:XMI>
+]]></diagram>
+</proc:process>

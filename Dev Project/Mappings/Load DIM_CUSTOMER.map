@@ -58,11 +58,8 @@
   <join id="_HvQoAPNnEeqLKIaZDIIWGw" location="SRC" left="_HJK4YPNnEeqLKIaZDIIWGw" order="10" right="_GyL7wPNnEeqLKIaZDIIWGw">
     <expression>T_TITLE.TIT_CODE = T_CUSTOMER.TIT_CODE</expression>
   </join>
-  <filter id="_r8WP0PNoEeqLKIaZDIIWGw" location="SRC">
-    <expression>T_CUSTOMER.CUS_ID = 1</expression>
-  </filter>
   <template id="_ITpHcPNnEeqLKIaZDIIWGw" name="I_DIM_CUSTOMER" process="platform:/plugin/com.indy.environment/templates/templates.generic/Rdbms/Hsql/INTEGRATION%20Hsql.tp.proc#_HFOfdjEZEd-WZe6cNi2k2w?fileId=_HFOfdjEZEd-WZe6cNi2k2w$type=proc$name=INTEGRATION%20Hsql?" targetId="_Fpw7IPNnEeqLKIaZDIIWGw"/>
-  <template id="_IUUc4PNnEeqLKIaZDIIWGw" name="L1_DIM_CUSTOMER" process="platform:/plugin/com.indy.environment/templates/templates.generic/Rdbms/LOAD%20Rdbms%20to%20Rdbms.tp.proc#_aafbe681-11ab-4ebc-ab56-de794128c580?fileId=_aafbe681-11ab-4ebc-ab56-de794128c580$type=proc$name=LOAD%20Rdbms%20to%20Rdbms?" sourceId="_HJK4YPNnEeqLKIaZDIIWGw _GyL7wPNnEeqLKIaZDIIWGw" targetId="_Fpw7IPNnEeqLKIaZDIIWGw"/>
+  <template id="_IUUc4PNnEeqLKIaZDIIWGw" name="L1_DIM_CUSTOMER" process="platform:/plugin/com.indy.environment/templates/templates.generic/Rdbms/LOAD%20Rdbms%20to%20Rdbms.tp.proc#_aafbe681-11ab-4ebc-ab56-de794128c580?fileId=_aafbe681-11ab-4ebc-ab56-de794128c580$type=proc$name=LOAD%20Rdbms%20to%20Rdbms?" sourceId="_GyL7wPNnEeqLKIaZDIIWGw _HJK4YPNnEeqLKIaZDIIWGw" targetId="_Fpw7IPNnEeqLKIaZDIIWGw"/>
   <dataSet id="_FqALsPNnEeqLKIaZDIIWGw">
     <container>_Fpw7IPNnEeqLKIaZDIIWGw</container>
   </dataSet>
@@ -128,13 +125,6 @@
     <element xmi:type="map:Join" href="../../Load%20DIM_CUSTOMER.map#_HvQoAPNnEeqLKIaZDIIWGw?fileId=_EQuroPNnEeqLKIaZDIIWGw$type=map?"/>
     <layoutConstraint xmi:type="notation:Bounds" xmi:id="_HvsF1PNnEeqLKIaZDIIWGw" x="286" y="343"/>
   </children>
-  <children xmi:type="notation:Node" xmi:id="_r863kPNoEeqLKIaZDIIWGw" type="2002">
-    <styles xmi:type="notation:DescriptionStyle" xmi:id="_r863kfNoEeqLKIaZDIIWGw"/>
-    <styles xmi:type="notation:FontStyle" xmi:id="_r863kvNoEeqLKIaZDIIWGw" fontName="Segoe UI"/>
-    <styles xmi:type="notation:FillStyle" xmi:id="_r863k_NoEeqLKIaZDIIWGw"/>
-    <element xmi:type="map:Filter" href="../../Load%20DIM_CUSTOMER.map#_r8WP0PNoEeqLKIaZDIIWGw?fileId=_EQuroPNnEeqLKIaZDIIWGw$type=map?"/>
-    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_r863lPNoEeqLKIaZDIIWGw" x="230" y="222"/>
-  </children>
   <children xmi:type="notation:Shape" xmi:id="_FqFrQPNnEeqLKIaZDIIWGw" type="2004" fontName="Segoe UI">
     <children xmi:type="notation:DecorationNode" xmi:id="_FqGSUPNnEeqLKIaZDIIWGw" type="5005"/>
     <children xmi:type="notation:DecorationNode" xmi:id="_FqGSUfNnEeqLKIaZDIIWGw" type="5007"/>
@@ -180,10 +170,6 @@
   <edges xmi:type="notation:Edge" xmi:id="_I-L5QPNnEeqLKIaZDIIWGw" type="targetLink" source="_FqFrQPNnEeqLKIaZDIIWGw" target="_HJWekPNnEeqLKIaZDIIWGw">
     <element xsi:nil="true"/>
     <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_I-L5QfNnEeqLKIaZDIIWGw" points="[-182, 66, 270, -97]$[-380, 137, 72, -26]"/>
-  </edges>
-  <edges xmi:type="notation:Edge" xmi:id="_r89T0PNoEeqLKIaZDIIWGw" type="joinLink" source="_r863kPNoEeqLKIaZDIIWGw" target="_GyVswPNnEeqLKIaZDIIWGw">
-    <element xsi:nil="true"/>
-    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_r89T0fNoEeqLKIaZDIIWGw" points="[0, 0, -394, -265]$[302, 203, -92, -62]"/>
   </edges>
 </notation:Diagram>
 ]]></diagram>

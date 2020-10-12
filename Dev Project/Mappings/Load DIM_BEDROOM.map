@@ -25,7 +25,10 @@
     </field>
     <field id="_VehSofQ-EeqVyNW5qtGq5A" enable="true" insert="true" name="BDR_SHOWER" ref="../Metadata/Datamart.md#_H8Y6gPNmEeqLKIaZDIIWGw?fileId=_EIDtQPNmEeqLKIaZDIIWGw$type=md$name=BDR_SHOWER?" update="true">
       <expression id="_WDscQPQ-EeqVyNW5qtGq5A" setDescriptorRef="_WDgPAPQ-EeqVyNW5qtGq5A">
-        <expression>T_BEDROOM.BDR_SHOWER</expression>
+        <expression><![CDATA[case
+      when T_BEDROOM.BDR_SHOWER = 'true' then 1
+      else 0
+end]]></expression>
       </expression>
     </field>
     <field id="_VegEgPQ-EeqVyNW5qtGq5A" enable="true" insert="true" name="BDR_NUMBER" ref="../Metadata/Datamart.md#_H8XsYPNmEeqLKIaZDIIWGw?fileId=_EIDtQPNmEeqLKIaZDIIWGw$type=md$name=BDR_NUMBER?" update="true">
@@ -35,12 +38,16 @@
     </field>
     <field id="_VegrkPQ-EeqVyNW5qtGq5A" enable="true" insert="true" name="BDR_FLOOR" ref="../Metadata/Datamart.md#_H8XsaPNmEeqLKIaZDIIWGw?fileId=_EIDtQPNmEeqLKIaZDIIWGw$type=md$name=BDR_FLOOR?" update="true">
       <expression id="_WDtqYPQ-EeqVyNW5qtGq5A" setDescriptorRef="_WDgPAPQ-EeqVyNW5qtGq5A">
-        <expression>T_BEDROOM.BDR_FLOOR</expression>
+        <expression><![CDATA[case
+      when lower(T_BEDROOM.BDR_FLOOR) = 'gf' then 0
+      when lower(T_BEDROOM.BDR_FLOOR) = '1st' then 1
+      when lower(T_BEDROOM.BDR_FLOOR) = '2nd' then 2
+end]]></expression>
       </expression>
     </field>
     <field id="_VeigwPQ-EeqVyNW5qtGq5A" enable="true" insert="true" name="BDR_BED_COUNT" ref="../Metadata/Datamart.md#_H8aIoPNmEeqLKIaZDIIWGw?fileId=_EIDtQPNmEeqLKIaZDIIWGw$type=md$name=BDR_BED_COUNT?" update="true">
       <expression id="_WDuRcPQ-EeqVyNW5qtGq5A" setDescriptorRef="_WDgPAPQ-EeqVyNW5qtGq5A">
-        <expression>T_BEDROOM.BDR_BED_COUNT</expression>
+        <expression>convert(T_BEDROOM.BDR_BED_COUNT,NUMERIC)</expression>
       </expression>
     </field>
     <field id="_VefdcPQ-EeqVyNW5qtGq5A" enable="true" insert="true" name="BDR_ID" ref="../Metadata/Datamart.md#_H8XFUPNmEeqLKIaZDIIWGw?fileId=_EIDtQPNmEeqLKIaZDIIWGw$type=md$name=BDR_ID?" update="true" updateKey="true">
@@ -50,7 +57,10 @@
     </field>
     <field id="_VehSoPQ-EeqVyNW5qtGq5A" enable="true" insert="true" name="BDR_BATH" ref="../Metadata/Datamart.md#_H8YTcPNmEeqLKIaZDIIWGw?fileId=_EIDtQPNmEeqLKIaZDIIWGw$type=md$name=BDR_BATH?" update="true">
       <expression id="_WDvfkPQ-EeqVyNW5qtGq5A" setDescriptorRef="_WDgPAPQ-EeqVyNW5qtGq5A">
-        <expression>T_BEDROOM.BDR_BATH</expression>
+        <expression><![CDATA[case
+      when T_BEDROOM.BDR_BATH = 'true' then 1
+      else 0
+end]]></expression>
       </expression>
     </field>
     <field id="_VejH0PQ-EeqVyNW5qtGq5A" enable="true" insert="true" name="BDR_PHONE_NUMBER" ref="../Metadata/Datamart.md#_H8aIqPNmEeqLKIaZDIIWGw?fileId=_EIDtQPNmEeqLKIaZDIIWGw$type=md$name=BDR_PHONE_NUMBER?" update="true">
@@ -60,7 +70,10 @@
     </field>
     <field id="_Veh5sPQ-EeqVyNW5qtGq5A" enable="true" insert="true" name="BDR_BAR" ref="../Metadata/Datamart.md#_H8ZhkPNmEeqLKIaZDIIWGw?fileId=_EIDtQPNmEeqLKIaZDIIWGw$type=md$name=BDR_BAR?" update="true">
       <expression id="_WDwGofQ-EeqVyNW5qtGq5A" setDescriptorRef="_WDgPAPQ-EeqVyNW5qtGq5A">
-        <expression>T_BEDROOM.BDR_BAR</expression>
+        <expression><![CDATA[case
+      when T_BEDROOM.BDR_BAR = 'true' then 1
+      else 0
+end]]></expression>
       </expression>
     </field>
     <constraint id="_Vek9APQ-EeqVyNW5qtGq5A" name="PK_DIM_BEDROOM" ref="../Metadata/Datamart.md#_H8dL8PNmEeqLKIaZDIIWGw?fileId=_EIDtQPNmEeqLKIaZDIIWGw$type=md$name=PK_DIM_BEDROOM?" reject="true"/>

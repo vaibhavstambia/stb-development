@@ -1,1 +1,1 @@
-buildPackage -mainProcessWorkspacePath "Dev Project/Process/Load All Datamart.proc" -package "./output.pck"
+buildPackage -mainProcessWorkspacePath "Dev Project/Process/wsLoadAllDatamart.proc" -package "./output.pck"

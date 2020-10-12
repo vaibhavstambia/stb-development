@@ -22,7 +22,7 @@
     </children>
     <styles xmi:type="notation:ShapeStyle" xmi:id="_sHNzMQOnEeu8yeYpnounLQ" fontName="Segoe UI"/>
     <element xmi:type="proc:ActionProcessRef" href="../../Load%20All%20Datamart.proc#64f44b52-74e6-4044-94f0-430dc3170da1?fileId=d8a3107d-9614-41c4-bf79-f685f9d68dea$type=proc$name=Load%20DIM_CUSTOMER?"/>
-    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_sHNzMgOnEeu8yeYpnounLQ" x="360" y="214"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_sHNzMgOnEeu8yeYpnounLQ" x="195" y="220"/>
   </children>
   <children xmi:type="notation:Node" xmi:id="_suZvAAOnEeu8yeYpnounLQ" type="2003">
     <children xmi:type="notation:Node" xmi:id="_sufOkAOnEeu8yeYpnounLQ" type="5003"/>
@@ -55,18 +55,6 @@
     <styles xmi:type="notation:ShapeStyle" xmi:id="_cyf5sQOsEeu3GsCj9F155w" fontName="Segoe UI"/>
     <element xmi:type="proc:ActionProcessRef" href="../../Load%20All%20Datamart.proc#c0e4ed2b-c7b6-40fa-9be9-1725c4f7de68?fileId=d8a3107d-9614-41c4-bf79-f685f9d68dea$type=proc$name=Load%20DIM_BEDROOM?"/>
     <layoutConstraint xmi:type="notation:Bounds" xmi:id="_cyf5sgOsEeu3GsCj9F155w" x="580" y="210"/>
-  </children>
-  <children xmi:type="notation:Shape" xmi:id="_dVIrsAO3Eeu05vw9WGG2UQ" type="Note" fontName="Segoe UI" description="Test Webhook" fillColor="13369343" transparency="0" lineColor="6737151" lineWidth="1">
-    <children xmi:type="notation:BasicDecorationNode" xmi:id="_dViUUAO3Eeu05vw9WGG2UQ" type="DiagramName">
-      <element xsi:nil="true"/>
-    </children>
-    <children xmi:type="notation:BasicDecorationNode" xmi:id="_dVi7YAO3Eeu05vw9WGG2UQ" type="Description">
-      <element xsi:nil="true"/>
-    </children>
-    <styles xmi:type="notation:TextStyle" xmi:id="_dVJSwAO3Eeu05vw9WGG2UQ"/>
-    <styles xmi:type="notation:LineTypeStyle" xmi:id="_dVJSwQO3Eeu05vw9WGG2UQ"/>
-    <element xsi:nil="true"/>
-    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_dVJSwgO3Eeu05vw9WGG2UQ" x="936" y="97"/>
   </children>
   <styles xmi:type="notation:DiagramStyle" xmi:id="_n3UEQQOnEeu8yeYpnounLQ"/>
   <element xmi:type="proc:ActionProcess" href="../../Load%20All%20Datamart.proc#d8a3107d-9614-41c4-bf79-f685f9d68dea?fileId=d8a3107d-9614-41c4-bf79-f685f9d68dea$type=proc$name=Load%20All%20Datamart?"/>
