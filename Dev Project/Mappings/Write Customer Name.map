@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map:map xmlns:map="http://www.indy.com/v2/map" id="_KNldkA0vEeu8CJE7Ik3tcg" internalVersion="7" tech="platform:/plugin/com.indy.environment/technology/map/map.tech#_waYSMH8VEd2__Mzb_dB76A?fileId=_waYSMH8VEd2__Mzb_dB76A$type=tech$name=flow?">
+  <datastore id="_MEdfoA0vEeu8CJE7Ik3tcg" alias="DIM_CUSTOMER" dataset="_MEzd4A0vEeu8CJE7Ik3tcg" ref="../Metadata/Datamart.md#_H9j_MfNmEeqLKIaZDIIWGw?fileId=_EIDtQPNmEeqLKIaZDIIWGw$type=md$name=DIM_CUSTOMER?">
+    <field id="_MEvMcA0vEeu8CJE7Ik3tcg" fullAlias="CUS_NAME" name="CUS_NAME" ref="../Metadata/Datamart.md#_H9nCj_NmEeqLKIaZDIIWGw?fileId=_EIDtQPNmEeqLKIaZDIIWGw$type=md$name=CUS_NAME?"/>
+    <field id="_MEvMcQ0vEeu8CJE7Ik3tcg" name="CUS_COMPANY" ref="../Metadata/Datamart.md#_H9npkPNmEeqLKIaZDIIWGw?fileId=_EIDtQPNmEeqLKIaZDIIWGw$type=md$name=CUS_COMPANY?"/>
+    <field id="_MEvMdA0vEeu8CJE7Ik3tcg" name="UPDATE_DATE" ref="../Metadata/Datamart.md#_H9npp_NmEeqLKIaZDIIWGw?fileId=_EIDtQPNmEeqLKIaZDIIWGw$type=md$name=UPDATE_DATE?"/>
+    <field id="_MEvMcg0vEeu8CJE7Ik3tcg" name="GEO_KEY_ID" ref="../Metadata/Datamart.md#_H9npl_NmEeqLKIaZDIIWGw?fileId=_EIDtQPNmEeqLKIaZDIIWGw$type=md$name=GEO_KEY_ID?"/>
+    <field id="_MEulYQ0vEeu8CJE7Ik3tcg" name="CUS_TITLE" ref="../Metadata/Datamart.md#_H9nCiPNmEeqLKIaZDIIWGw?fileId=_EIDtQPNmEeqLKIaZDIIWGw$type=md$name=CUS_TITLE?"/>
+    <field id="_MEvMcw0vEeu8CJE7Ik3tcg" name="CUS_VIP" ref="../Metadata/Datamart.md#_H9npn_NmEeqLKIaZDIIWGw?fileId=_EIDtQPNmEeqLKIaZDIIWGw$type=md$name=CUS_VIP?"/>
+    <field id="_MEulYA0vEeu8CJE7Ik3tcg" fullAlias="CUS_ID" name="CUS_ID" ref="../Metadata/Datamart.md#_H9nCgPNmEeqLKIaZDIIWGw?fileId=_EIDtQPNmEeqLKIaZDIIWGw$type=md$name=CUS_ID?" updateKey="true"/>
+    <constraint id="_MEvMdQ0vEeu8CJE7Ik3tcg" name="FK_DIM_CUSTOMER_GEO" ref="../Metadata/Datamart.md#_H9z20PNmEeqLKIaZDIIWGw?fileId=_EIDtQPNmEeqLKIaZDIIWGw$type=md$name=FK_DIM_CUSTOMER_GEO?" reject="true"/>
+    <constraint id="_MEvMdg0vEeu8CJE7Ik3tcg" name="PK_DIM_CUSTOMER" ref="../Metadata/Datamart.md#_H9o3sPNmEeqLKIaZDIIWGw?fileId=_EIDtQPNmEeqLKIaZDIIWGw$type=md$name=PK_DIM_CUSTOMER?" reject="true"/>
+  </datastore>
+  <datastore id="_OSMigA0vEeu8CJE7Ik3tcg" alias="ws_customer" dataset="_OSOXsA0vEeu8CJE7Ik3tcg" ref="../Metadata/WSOutputFile.md#_9gPBOw0uEeu8CJE7Ik3tcg?fileId=_1W9DcAxeEeu8CJE7Ik3tcg$type=md$name=ws_customer?" subExpression="[A]">
+    <field id="_OSNJkA0vEeu8CJE7Ik3tcg" expand="true" name="ws_customer" ref="../Metadata/WSOutputFile.md#_9gPBOw0uEeu8CJE7Ik3tcg?fileId=_1W9DcAxeEeu8CJE7Ik3tcg$type=md$name=ws_customer?" updateKey="true">
+      <expression id="_Q1Dg0A0vEeu8CJE7Ik3tcg" setDescriptorRef="_Q1BroA0vEeu8CJE7Ik3tcg">
+        <expression></expression>
+      </expression>
+    </field>
+    <field id="_OSNJkQ0vEeu8CJE7Ik3tcg" enable="true" insert="true" name="cust_name" parent="_OSNJkA0vEeu8CJE7Ik3tcg" ref="../Metadata/WSOutputFile.md#_DhAQ0A0vEeu8CJE7Ik3tcg?fileId=_1W9DcAxeEeu8CJE7Ik3tcg$type=md$name=cust_name?" update="true">
+      <expression id="_Q1EH4A0vEeu8CJE7Ik3tcg" setDescriptorRef="_Q1BroA0vEeu8CJE7Ik3tcg">
+        <expression>DIM_CUSTOMER.CUS_NAME</expression>
+      </expression>
+    </field>
+    <setDescriptor id="_Q1BroA0vEeu8CJE7Ik3tcg" label="A"/>
+  </datastore>
+  <filter id="_QFY-cA0vEeu8CJE7Ik3tcg" enable="true" location="SRC">
+    <expression>DIM_CUSTOMER.CUS_ID = ${~/cust_id}$</expression>
+  </filter>
+  <template id="_Q1GkIA0vEeu8CJE7Ik3tcg" name="I_ws_customer" process="platform:/plugin/com.indy.environment/templates/templates.generic/File/INTEGRATION%20File.tp.proc#_4WVbt4c7Ed6NdYXLsd44UQ?fileId=_4WVbt4c7Ed6NdYXLsd44UQ$type=proc$name=INTEGRATION%20File?" targetId="_OSMigA0vEeu8CJE7Ik3tcg"/>
+  <dataSet id="_MEzd4A0vEeu8CJE7Ik3tcg">
+    <container>_MEdfoA0vEeu8CJE7Ik3tcg</container>
+  </dataSet>
+  <dataSet id="_OSOXsA0vEeu8CJE7Ik3tcg">
+    <container>_OSMigA0vEeu8CJE7Ik3tcg</container>
+  </dataSet>
+  <hint>
+    <usedField>#_MEvMcA0vEeu8CJE7Ik3tcg</usedField>
+    <usedField>#_MEulYA0vEeu8CJE7Ik3tcg</usedField>
+  </hint>
+  <diagram><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<notation:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:map="http://www.indy.com/v2/map" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.1/notation" xsi:schemaLocation="http://www.eclipse.org/gmf/runtime/1.0.1/notation http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmi:id="_KPds4A0vEeu8CJE7Ik3tcg" type="Map" measurementUnit="Pixel">
+  <children xmi:type="notation:Shape" xmi:id="_ME4WYA0vEeu8CJE7Ik3tcg" type="2004" fontName="Segoe UI">
+    <children xmi:type="notation:DecorationNode" xmi:id="_ME49cA0vEeu8CJE7Ik3tcg" type="5005"/>
+    <children xmi:type="notation:DecorationNode" xmi:id="_ME49cQ0vEeu8CJE7Ik3tcg" type="5007"/>
+    <children xmi:type="notation:DecorationNode" xmi:id="_ME49cg0vEeu8CJE7Ik3tcg" type="7003"/>
+    <children xmi:type="notation:DecorationNode" xmi:id="_ME49cw0vEeu8CJE7Ik3tcg" type="7009"/>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_ME49dA0vEeu8CJE7Ik3tcg" type="7004">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_ME49dQ0vEeu8CJE7Ik3tcg"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_ME49dg0vEeu8CJE7Ik3tcg"/>
+    </children>
+    <children xmi:type="notation:DecorationNode" xmi:id="_ME49dw0vEeu8CJE7Ik3tcg" type="5009">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_ME49eA0vEeu8CJE7Ik3tcg"/>
+    </children>
+    <children xmi:type="notation:DecorationNode" xmi:id="_ME49eQ0vEeu8CJE7Ik3tcg" type="7005">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_ME49eg0vEeu8CJE7Ik3tcg"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_ME49ew0vEeu8CJE7Ik3tcg"/>
+    </children>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_ME49fA0vEeu8CJE7Ik3tcg" type="7007"/>
+    <element xmi:type="map:Datastore" href="../../Write%20Customer%20Name.map#_MEdfoA0vEeu8CJE7Ik3tcg?fileId=_KNldkA0vEeu8CJE7Ik3tcg$type=map?"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ME4WYQ0vEeu8CJE7Ik3tcg" x="530" y="195"/>
+  </children>
+  <children xmi:type="notation:Shape" xmi:id="_OSQz8A0vEeu8CJE7Ik3tcg" type="2004" fontName="Segoe UI">
+    <children xmi:type="notation:DecorationNode" xmi:id="_OSQz8g0vEeu8CJE7Ik3tcg" type="5005"/>
+    <children xmi:type="notation:DecorationNode" xmi:id="_OSQz8w0vEeu8CJE7Ik3tcg" type="5007"/>
+    <children xmi:type="notation:DecorationNode" xmi:id="_OSQz9A0vEeu8CJE7Ik3tcg" type="7003"/>
+    <children xmi:type="notation:DecorationNode" xmi:id="_OSRbAA0vEeu8CJE7Ik3tcg" type="7009"/>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_OSRbAQ0vEeu8CJE7Ik3tcg" type="7004">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_OSRbAg0vEeu8CJE7Ik3tcg"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_OSRbAw0vEeu8CJE7Ik3tcg"/>
+    </children>
+    <children xmi:type="notation:DecorationNode" xmi:id="_OSRbBA0vEeu8CJE7Ik3tcg" type="5009">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_OSRbBQ0vEeu8CJE7Ik3tcg"/>
+    </children>
+    <children xmi:type="notation:DecorationNode" xmi:id="_OSRbBg0vEeu8CJE7Ik3tcg" type="7005">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_OSRbBw0vEeu8CJE7Ik3tcg"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_OSRbCA0vEeu8CJE7Ik3tcg"/>
+    </children>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_OSRbCQ0vEeu8CJE7Ik3tcg" type="7007"/>
+    <element xmi:type="map:Datastore" href="../../Write%20Customer%20Name.map#_OSMigA0vEeu8CJE7Ik3tcg?fileId=_KNldkA0vEeu8CJE7Ik3tcg$type=map?"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_OSQz8Q0vEeu8CJE7Ik3tcg" x="857" y="215"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_QFivcA0vEeu8CJE7Ik3tcg" type="2002">
+    <styles xmi:type="notation:DescriptionStyle" xmi:id="_QFivcQ0vEeu8CJE7Ik3tcg"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_QFivcg0vEeu8CJE7Ik3tcg" fontName="Segoe UI"/>
+    <styles xmi:type="notation:FillStyle" xmi:id="_QFivcw0vEeu8CJE7Ik3tcg"/>
+    <element xmi:type="map:Filter" href="../../Write%20Customer%20Name.map#_QFY-cA0vEeu8CJE7Ik3tcg?fileId=_KNldkA0vEeu8CJE7Ik3tcg$type=map?"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_QFivdA0vEeu8CJE7Ik3tcg" x="340" y="347"/>
+  </children>
+  <styles xmi:type="notation:DiagramStyle" xmi:id="_KPds4Q0vEeu8CJE7Ik3tcg"/>
+  <element xmi:type="map:Map" href="../../Write%20Customer%20Name.map#_KNldkA0vEeu8CJE7Ik3tcg?fileId=_KNldkA0vEeu8CJE7Ik3tcg$type=map$name=Write%20Customer%20Name?"/>
+  <edges xmi:type="notation:Edge" xmi:id="_QFkkoA0vEeu8CJE7Ik3tcg" type="joinLink" source="_QFivcA0vEeu8CJE7Ik3tcg" target="_ME4WYA0vEeu8CJE7Ik3tcg">
+    <element xsi:nil="true"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_QFkkoQ0vEeu8CJE7Ik3tcg" points="[0, 0, -617, -270]$[530, 232, -87, -38]"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_Q2j8sA0vEeu8CJE7Ik3tcg" type="targetLink" source="_OSQz8A0vEeu8CJE7Ik3tcg" target="_ME4WYA0vEeu8CJE7Ik3tcg">
+    <element xsi:nil="true"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_Q2j8sQ0vEeu8CJE7Ik3tcg" points="[-81, 5, 240, -15]$[-234, 15, 87, -5]"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_Q2kjwA0vEeu8CJE7Ik3tcg" type="targetDataSetLink" source="_OSQz8A0vEeu8CJE7Ik3tcg" target="_OSQz8A0vEeu8CJE7Ik3tcg">
+    <element xmi:type="map:DataSet" href="../../Write%20Customer%20Name.map#_MEzd4A0vEeu8CJE7Ik3tcg?fileId=_KNldkA0vEeu8CJE7Ik3tcg$type=map?"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_Q2kjwQ0vEeu8CJE7Ik3tcg" points="[0, 0, 0, 0]$[0, 0, 0, 0]"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_Q2lK0A0vEeu8CJE7Ik3tcg" type="targetSetLink" source="_OSQz8A0vEeu8CJE7Ik3tcg" target="_OSQz8A0vEeu8CJE7Ik3tcg">
+    <element xmi:type="map:SetDescriptor" href="../../Write%20Customer%20Name.map#_Q1BroA0vEeu8CJE7Ik3tcg?fileId=_KNldkA0vEeu8CJE7Ik3tcg$type=map?"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_Q2lK0Q0vEeu8CJE7Ik3tcg" points="[0, 0, 0, 0]$[0, 0, 0, 0]"/>
+  </edges>
+</notation:Diagram>
+]]></diagram>
+</map:map>

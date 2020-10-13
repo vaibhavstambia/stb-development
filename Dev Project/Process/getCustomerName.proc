@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<proc:process xmlns:proc="http://www.example.org/proc" id="77016803-09d6-4ed0-aa3a-b31ff25b5198">
+  <metaDataLink id="70247048-a131-4538-a441-0e7f81765127" output="true" name="ws_customer" target="../Metadata/WSOutputFile.md#_9gPBOw0uEeu8CJE7Ik3tcg?fileId=_1W9DcAxeEeu8CJE7Ik3tcg$type=md$name=ws_customer?"/>
+  <parameter id="390c05b4-4190-4a07-bc6a-05f757120c49" input="true" name="cust_id" type="Integer" value="-1"/>
+  <actionProcessRef id="a257489b-1679-451a-a7c7-a528785bf8fb" isBeginAction="false" name="Write Customer Name" nbCycles="-1" toleratedError="false" processMap="true" targetName="../Mappings/Write%20Customer%20Name.map#_KNldkA0vEeu8CJE7Ik3tcg?fileId=_KNldkA0vEeu8CJE7Ik3tcg$name=Write%20Customer%20Name$type=map?"/>
+  <diagram><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<notation:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.1/notation" xmlns:proc="http://www.example.org/proc" xsi:schemaLocation="http://www.eclipse.org/gmf/runtime/1.0.1/notation http://www.eclipse.org/gmf/runtime/1.0.2/notation#/?fileId=77016803-09d6-4ed0-aa3a-b31ff25b5198?" xmi:id="_geNnAA0vEeu8CJE7Ik3tcg" type="Proc" measurementUnit="Pixel">
+  <children xmi:type="notation:Node" xmi:id="_hnwpAA0vEeu8CJE7Ik3tcg" type="2003">
+    <children xmi:type="notation:Node" xmi:id="_hnyeMA0vEeu8CJE7Ik3tcg" type="5003"/>
+    <children xmi:type="notation:Node" xmi:id="_hnyeMQ0vEeu8CJE7Ik3tcg" type="7003">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_hnyeMg0vEeu8CJE7Ik3tcg" collapsed="true"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_hnyeMw0vEeu8CJE7Ik3tcg"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_hnyeNA0vEeu8CJE7Ik3tcg"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_hnyeNQ0vEeu8CJE7Ik3tcg" type="7004">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_hnyeNg0vEeu8CJE7Ik3tcg"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_hnyeNw0vEeu8CJE7Ik3tcg"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_hnyeOA0vEeu8CJE7Ik3tcg"/>
+    </children>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_hnwpAQ0vEeu8CJE7Ik3tcg" fontName="Segoe UI"/>
+    <element xmi:type="proc:ActionProcessRef" href="../../getCustomerName.proc#a257489b-1679-451a-a7c7-a528785bf8fb?fileId=77016803-09d6-4ed0-aa3a-b31ff25b5198$type=proc$name=Write%20Customer%20Name?"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_hnwpAg0vEeu8CJE7Ik3tcg" x="577" y="189"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_ixLvMA0vEeu8CJE7Ik3tcg" type="2005">
+    <children xmi:type="notation:Node" xmi:id="_ixQAoA0vEeu8CJE7Ik3tcg" type="5005"/>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_ixLvMQ0vEeu8CJE7Ik3tcg" fontName="Segoe UI"/>
+    <element xmi:type="proc:Parameter" href="../../getCustomerName.proc#390c05b4-4190-4a07-bc6a-05f757120c49?fileId=77016803-09d6-4ed0-aa3a-b31ff25b5198$type=proc$name=cust_id?"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ixLvMg0vEeu8CJE7Ik3tcg" x="220" y="228"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_ndbb4A0vEeu8CJE7Ik3tcg" type="2006">
+    <children xmi:type="notation:Node" xmi:id="_ndcqAA0vEeu8CJE7Ik3tcg" type="5006"/>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_ndbb4Q0vEeu8CJE7Ik3tcg" fontName="Segoe UI"/>
+    <element xmi:type="proc:MetaDataLink" href="../../getCustomerName.proc#70247048-a131-4538-a441-0e7f81765127?fileId=77016803-09d6-4ed0-aa3a-b31ff25b5198$type=proc?"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ndbb4g0vEeu8CJE7Ik3tcg" x="912" y="251"/>
+  </children>
+  <styles xmi:type="notation:DiagramStyle" xmi:id="_geNnAQ0vEeu8CJE7Ik3tcg"/>
+  <element xmi:type="proc:ActionProcess" href="../../getCustomerName.proc#77016803-09d6-4ed0-aa3a-b31ff25b5198?fileId=77016803-09d6-4ed0-aa3a-b31ff25b5198$type=proc$name=getCustomerName?"/>
+</notation:Diagram>
+]]></diagram>
+</proc:process>

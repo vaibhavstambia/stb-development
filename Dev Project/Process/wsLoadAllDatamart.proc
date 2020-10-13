@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <proc:process xmlns:proc="http://www.example.org/proc" id="dc43db32-54f5-4642-9d78-fd0ced406711">
   <metaDataLink id="f98e57cb-b23e-4a4f-9878-0d8e263ac71b" output="true" name="ws_output" target="../Metadata/WSOutputFile.md#_BgJC0QxfEeu8CJE7Ik3tcg?fileId=_1W9DcAxeEeu8CJE7Ik3tcg$type=md$name=ws_output?"/>
+  <parameter id="799bb4b2-49a1-48d5-854c-2c8493a289ee" input="true" name="newParameter" type="Integer" value="-1"/>
   <subProcess id="3e99174a-eea7-4cd8-870f-f4b676c19734" isBeginAction="false" name="Load Datamart" nbCycles="-1" toleratedError="false">
     <actionCode id="5c2fb0a5-8fe6-4715-8622-7e1766349a87" isBeginAction="false" name="Write Errors" nbCycles="-1" toleratedError="false" technology="com.indy.engine.actionCodes.WriteTxtFileActionCodeI">
       <parameter id="a50b79ce-3e50-4455-80b3-c0b5d57c1e60" name="TXT_WRITE_FILENAME" type="String" value="${/CORE_TEMPORARY_FOLDER}$/ws_output.csv"/>
@@ -62,6 +63,12 @@ DIM_DIM_BEDROOM - %e(rhino){__ctx__.sumVariable(&quot;SQL_STAT_INSERT&quot;, &qu
       <styles xmi:type="notation:ShapeStyle" xmi:id="_LY0YIQxfEeu8CJE7Ik3tcg" fontName="Segoe UI"/>
       <element xmi:type="proc:MetaDataLink" href="../../wsLoadAllDatamart.proc#f98e57cb-b23e-4a4f-9878-0d8e263ac71b?fileId=dc43db32-54f5-4642-9d78-fd0ced406711$type=proc?"/>
       <layoutConstraint xmi:type="notation:Bounds" xmi:id="_LY0YIgxfEeu8CJE7Ik3tcg" x="860" y="193"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_UNUxUAx4Eeu8CJE7Ik3tcg" type="2005">
+      <children xmi:type="notation:Node" xmi:id="_UNXNkAx4Eeu8CJE7Ik3tcg" type="5005"/>
+      <styles xmi:type="notation:ShapeStyle" xmi:id="_UNUxUQx4Eeu8CJE7Ik3tcg" fontName="Segoe UI"/>
+      <element xmi:type="proc:Parameter" href="../../wsLoadAllDatamart.proc#799bb4b2-49a1-48d5-854c-2c8493a289ee?fileId=dc43db32-54f5-4642-9d78-fd0ced406711$type=proc$name=newParameter?"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_UNUxUgx4Eeu8CJE7Ik3tcg" x="265" y="250"/>
     </children>
     <styles xmi:type="notation:DiagramStyle" xmi:id="_SE314QxeEeu8CJE7Ik3tcg"/>
     <element xmi:type="proc:ActionProcess" href="../../wsLoadAllDatamart.proc#dc43db32-54f5-4642-9d78-fd0ced406711?fileId=dc43db32-54f5-4642-9d78-fd0ced406711$type=proc$name=wsLoadAllDatamart?"/>

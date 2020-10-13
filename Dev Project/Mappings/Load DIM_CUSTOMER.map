@@ -28,7 +28,7 @@
     </field>
     <field id="_Fp1MkfNnEeqLKIaZDIIWGw" enable="true" insert="true" name="CUS_NAME" ref="../Metadata/Datamart.md#_H9nCj_NmEeqLKIaZDIIWGw?fileId=_EIDtQPNmEeqLKIaZDIIWGw$type=md$name=CUS_NAME?" update="true">
       <expression id="_ITldEPNnEeqLKIaZDIIWGw" setDescriptorRef="_ITjA0PNnEeqLKIaZDIIWGw">
-        <expression>T_CUSTOMER.CUS_FIRST_NAME + T_CUSTOMER.CUS_LAST_NAME</expression>
+        <expression>T_CUSTOMER.CUS_FIRST_NAME + ' ' + T_CUSTOMER.CUS_LAST_NAME</expression>
       </expression>
     </field>
     <field id="_Fp1MkPNnEeqLKIaZDIIWGw" enable="true" insert="true" name="CUS_TITLE" ref="../Metadata/Datamart.md#_H9nCiPNmEeqLKIaZDIIWGw?fileId=_EIDtQPNmEeqLKIaZDIIWGw$type=md$name=CUS_TITLE?" update="true">
