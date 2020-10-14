@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<proc:process xmlns:proc="http://www.example.org/proc" id="77016803-09d6-4ed0-aa3a-b31ff25b5198">
+<proc:process xmlns:proc="http://www.example.org/proc" id="77016803-09d6-4ed0-aa3a-b31ff25b5198" metaInf="&lt;httpRestWebServiceProperties path=&quot;getCustomerName&quot;  methods=&quot;get&quot;  extractRequestInfo=&quot;true&quot;>&#xD;&#xA;&lt;/httpRestWebServiceProperties>&#xD;&#xA;">
   <metaDataLink id="70247048-a131-4538-a441-0e7f81765127" output="true" name="ws_customer" target="../Metadata/WSOutputFile.md#_9gPBOw0uEeu8CJE7Ik3tcg?fileId=_1W9DcAxeEeu8CJE7Ik3tcg$type=md$name=ws_customer?"/>
   <parameter id="390c05b4-4190-4a07-bc6a-05f757120c49" input="true" name="cust_id" type="Integer" value="-1"/>
   <actionProcessRef id="a257489b-1679-451a-a7c7-a528785bf8fb" isBeginAction="false" name="Write Customer Name" nbCycles="-1" toleratedError="false" processMap="true" targetName="../Mappings/Write%20Customer%20Name.map#_KNldkA0vEeu8CJE7Ik3tcg?fileId=_KNldkA0vEeu8CJE7Ik3tcg$name=Write%20Customer%20Name$type=map?"/>
