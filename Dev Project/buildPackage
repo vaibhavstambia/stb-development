@@ -1,1 +1,1 @@
-buildPackage -mainProcessWorkspacePath "Dev Project/Process/getCustomerName.proc" -package "./output.pck"
+buildPackage -mainProcessWorkspacePath "Dev Project/Process/wsdlLoadAllDatamart.proc" -package "./output.pck"
