@@ -2,7 +2,7 @@
 <map:map xmlns:map="http://www.indy.com/v2/map" id="_KNldkA0vEeu8CJE7Ik3tcg" internalVersion="7" tech="platform:/plugin/com.indy.environment/technology/map/map.tech#_waYSMH8VEd2__Mzb_dB76A?fileId=_waYSMH8VEd2__Mzb_dB76A$type=tech$name=flow?">
   <datastore id="_MEdfoA0vEeu8CJE7Ik3tcg" alias="DIM_CUSTOMER" dataset="_MEzd4A0vEeu8CJE7Ik3tcg" ref="../Metadata/Datamart.md#_H9j_MfNmEeqLKIaZDIIWGw?fileId=_EIDtQPNmEeqLKIaZDIIWGw$type=md$name=DIM_CUSTOMER?">
     <field id="_MEvMcA0vEeu8CJE7Ik3tcg" fullAlias="CUS_NAME" name="CUS_NAME" ref="../Metadata/Datamart.md#_H9nCj_NmEeqLKIaZDIIWGw?fileId=_EIDtQPNmEeqLKIaZDIIWGw$type=md$name=CUS_NAME?"/>
-    <field id="_MEvMcQ0vEeu8CJE7Ik3tcg" name="CUS_COMPANY" ref="../Metadata/Datamart.md#_H9npkPNmEeqLKIaZDIIWGw?fileId=_EIDtQPNmEeqLKIaZDIIWGw$type=md$name=CUS_COMPANY?"/>
+    <field id="_MEvMcQ0vEeu8CJE7Ik3tcg" fullAlias="CUS_COMPANY" name="CUS_COMPANY" ref="../Metadata/Datamart.md#_H9npkPNmEeqLKIaZDIIWGw?fileId=_EIDtQPNmEeqLKIaZDIIWGw$type=md$name=CUS_COMPANY?"/>
     <field id="_MEvMdA0vEeu8CJE7Ik3tcg" name="UPDATE_DATE" ref="../Metadata/Datamart.md#_H9npp_NmEeqLKIaZDIIWGw?fileId=_EIDtQPNmEeqLKIaZDIIWGw$type=md$name=UPDATE_DATE?"/>
     <field id="_MEvMcg0vEeu8CJE7Ik3tcg" name="GEO_KEY_ID" ref="../Metadata/Datamart.md#_H9npl_NmEeqLKIaZDIIWGw?fileId=_EIDtQPNmEeqLKIaZDIIWGw$type=md$name=GEO_KEY_ID?"/>
     <field id="_MEulYQ0vEeu8CJE7Ik3tcg" name="CUS_TITLE" ref="../Metadata/Datamart.md#_H9nCiPNmEeqLKIaZDIIWGw?fileId=_EIDtQPNmEeqLKIaZDIIWGw$type=md$name=CUS_TITLE?"/>
@@ -19,7 +19,7 @@
     </field>
     <field id="_OSNJkQ0vEeu8CJE7Ik3tcg" enable="true" insert="true" name="cust_name" parent="_OSNJkA0vEeu8CJE7Ik3tcg" ref="../Metadata/WSOutputFile.md#_DhAQ0A0vEeu8CJE7Ik3tcg?fileId=_1W9DcAxeEeu8CJE7Ik3tcg$type=md$name=cust_name?" update="true">
       <expression id="_Q1EH4A0vEeu8CJE7Ik3tcg" setDescriptorRef="_Q1BroA0vEeu8CJE7Ik3tcg">
-        <expression>DIM_CUSTOMER.CUS_NAME</expression>
+        <expression>DIM_CUSTOMER.CUS_NAME + '(' + DIM_CUSTOMER.CUS_COMPANY + ')'</expression>
       </expression>
     </field>
     <setDescriptor id="_Q1BroA0vEeu8CJE7Ik3tcg" label="A"/>
@@ -36,6 +36,7 @@
   </dataSet>
   <hint>
     <usedField>#_MEvMcA0vEeu8CJE7Ik3tcg</usedField>
+    <usedField>#_MEvMcQ0vEeu8CJE7Ik3tcg</usedField>
     <usedField>#_MEulYA0vEeu8CJE7Ik3tcg</usedField>
   </hint>
   <diagram><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
